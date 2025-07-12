@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Nazario – Premium Eyewear & Fashion. Discover eyeglasses, sunglasses, contact lenses and more.">
+
+
+    <title>Nazario Fashion & Lifestyle| Premium Eyewear</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body class="page-bg">
+    <!-- Navigation -->
+      <nav class="navbar">
+  <div class="container">
+    
+    <!-- Logo -->
+    <div class="logo-text">
+      NAZARIO
+      <span>FASHION & LIFESTYLE</span>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+      <input type="text" placeholder="Search frames.." class="search-input">
+      <button class="search-button">
+        <i class="fas fa-search"></i>
+      </button>
+    </div>
+
+    <!-- Hamburger Menu Icon -->
+    <div class="hamburger" id="hamburger">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="nav-menu">
+      <ul class="nav-links">
+        <li><a href="#">HOME</a></li>
+        <li class="dropdown">
+          <a href="#">EYEGLASSES <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">Kids</a></li>
+            <li><a href="#">New Arrivals</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">SUNGLASSES <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Aviator</a></li>
+            <li><a href="#">Wayfarer</a></li>
+            <li><a href="#">Round</a></li>
+            <li><a href="#">Cat Eye</a></li>
+          </ul>
+        </li>
+        <li><a href="#">CONTACT LENSES</a></li>
+        <li><a href="#">ABOUT US</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+  </div>
+
+  
+
+      <!-- Icons -->
+      <div class="icons">
+        <div class="icon account-wrapper">
+          <i class="fa-regular fa-circle-user"></i>
+        </div>
+        <div class="icon heart">
+          <i class="fa-regular fa-heart"></i>
+        </div>
+        <div class="icon cart-wrapper">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-count">0</span>
+        </div>
+      </div>
+
+      <!-- Cart Modal -->
+      <div class="cart-modal" id="cartModal">
+        <div class="cart-modal-content">
+          <span class="close-cart" id="closeCart">&times;</span>
+          <h2>Your Cart</h2>
+          <ul id="cartItems"></ul>
+        </div>
+      </div>
+
+    </div>
+</nav>
+
+<!-- ---------------------sign in form--------------------------- -->
+<!-- Auth Modal -->
+<div class="auth-modal" id="authModal">
+  <div class="auth-content">
+    <span class="close-btn" id="closeAuthModal">&times;</span>
+
+    <!-- LOGIN FORM -->
+    <div class="form-section" id="loginSection">
+      <h2>Sign In</h2>
+      <form id="loginForm">
+        <input type="email" placeholder="Email Address" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Sign In</button>
+      </form>
+      <p class="switch-link">Don’t have an account? <a href="#" id="showSignup">Create Account</a></p>
+    </div>
+
+    <!-- SIGNUP FORM -->
+    <div class="form-section" id="signupSection">
+      <h2>Create an Account</h2>
+      <form id="signupForm">
+        <div class="name-fields">
+          <input type="text" placeholder="First Name" required>
+          <input type="text" placeholder="Last Name" required>
+        </div>
+        <input type="tel" placeholder="Mobile Number" required>
+        <input type="email" placeholder="Email Address" required>
+        <input type="password" placeholder="Password" required>
+
+        <label class="checkbox-label">
+          <input type="checkbox">
+          <span class="whatsapp-text">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo">
+            Get updates on WhatsApp
+          </span>
+        </label>
+
+        <p class="policy-text">
+          By creating this account, you agree to our 
+          <a href="#" class="policy-link">Privacy Policy</a>.
+        </p>
+
+        <button type="submit">Create an Account</button>
+      </form>
+      <p class="switch-link">Have an account? <a href="#" id="showLogin">Sign In</a></p>
+    </div>
+  </div>
+</div>
+
+
+
+       <!-- Hero Slider -->
+    <div class="hero-slider">
+        <div class="slide active" style="background-image: url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/aafe5d01-8e09-43ba-b4c5-bd295b8bb454.png')">
+           <img src="images/hero4.png" alt="Luxury eyewear hero image">
+            <div class="slide-content">
+                <h2>New Luxury Collection</h2>
+                <p>Discover our premium handcrafted eyewear for the modern lifestyle</p>
+                <button class="btn">Shop Now</button>
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/cd84ba7b-a628-423e-ad10-5fe726347591.png')">
+           <img src="images/hero3.png"alt="Luxury eyewear hero image">
+            <div class="slide-content">
+                <h2>2023 Trends</h2>
+                <p>The hottest sunglasses styles of the season</p>
+                <button class="btn">Explore</button>
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/df610752-b21d-444b-adf9-164a013a856f.png')">
+          <img src="images/hero2.png"alt="Luxury eyewear hero image">
+            <div class="slide-content">
+                <h2>Perfect Fit Glasses</h2>
+                <p>Custom prescription eyewear tailored to your vision</p>
+                <button class="btn">View Collection</button>
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/155c383d-796a-488f-8e12-7e2911a85855.png')">
+           <img src="images/hero1.png"alt="Luxury eyewear hero image">
+            <div class="slide-content">
+                <h2>Contact Lenses</h2>
+                <p>Premium comfort lenses with 30% off first purchase</p>
+                <button class="btn">Shop Now</button>
+            </div>
+        </div>
+
+        <div class="slider-arrows">
+            <div class="slider-arrow prev"><i class="fas fa-chevron-left"></i></div>
+            <div class="slider-arrow next"><i class="fas fa-chevron-right"></i></div>
+        </div>
+
+        <div class="slider-nav">
+            <div class="slider-dot active" data-index="0"></div>
+            <div class="slider-dot" data-index="1"></div>
+            <div class="slider-dot" data-index="2"></div>
+            <div class="slider-dot" data-index="3"></div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+<!-- Round Glasses Category Transition -->
+<div class="glasses-carousel-container">
+  <h1>Round Glasses Collection</h1>
+
+  <div class="glasses-carousel-track">
+    <!-- Slide 1 -->
+    <div class="glasses-slide">
+      <img src="category-images/Category 1.png" alt="Vintage Tortoise">
+      <h3>Vintage Tortoise</h3>
+      
+      <p>Rs.1299</p><button class="shopbtn">Shop Now</button>
+    </div>
+    <!-- Slide 2 -->
+    <div class="glasses-slide">
+      <img src="category-images/Category 2.png" alt="Metal Minimalist">
+      
+      <h3>Metal Minimalist</h3>
+      <p>Rs.3599</p><button class="shopbtn">Shop Now</button>
+    </div>
+    <!-- Slide 3 -->
+    <div class="glasses-slide">
+      <img src="category-images/Category 3.png" alt="Clear Acetate">
+      
+      <h3>Clear Acetate</h3>
+      <p>Rs.4899</p><button class="shopbtn">Shop Now</button>
+    </div>
+    <!-- Slide 4 -->
+    <div class="glasses-slide">
+      <img src="category-images/Category 4.png" alt="Titanium Rimless">
+      
+      <h3>Titanium Rimless</h3>
+      <p>Rs.2999</p><button class="shopbtn">Shop Now</button>
+    </div>
+    <!-- Slide 5 -->
+    <div class="glasses-slide">
+      <img src="category-images/Category 5.png" alt="Gold Filigree">
+     
+      <h3>Gold Filigree</h3>
+      <p>Rs.5599</p> <button class="shopbtn">Shop Now</button>
+    </div>
+  </div>
+
+<!-- ---------------------------new fild------------------------------------------- -->
+
+<section class="eyewear-categories" id="eyewearCategories">
+  <div class="eyewear-heading">
+    <span class="eyewear-subtitle">FIND YOUR PERFECT PAIR</span>
+    <h2 class="eyewear-title">THE RIGHT EYEWEAR FOR EVERY NEED</h2>
+  </div>
+
+  <div class="eyewear-grid">
+    <div class="eyewear-item">
+      <img src="perfect-pair/sunglasses.jpeg" alt="Sunglasses">
+      <p>Sunglasses</p>
+    </div>
+    <div class="eyewear-item">
+      <img src="perfect-pair/eye.jpeg" alt="Eyeglasses">
+      <p>Eyeglasses</p>
+    </div>
+    <div class="eyewear-item">
+      <img src="perfect-pair/computer.jpeg" alt="Computer Glasses">
+      <p>Computer Glasses</p>
+    </div>
+    <div class="eyewear-item">
+      <img src="perfect-pair/reading.jpeg" alt="Reading Glasses">
+      <p>Reading Glasses</p>
+    </div>
+    <div class="eyewear-item">
+      <img src="perfect-pair/contact.jpeg" alt="Contact Lenses">
+      <p>Contact Lenses</p>
+    </div>
+    <div class="eyewear-item">
+      <img src="perfect-pair/accesories.jpeg" alt="Accessories">
+      <p>Accessories</p>
+    </div>
+    <div class="btncount more-btn">
+      <button>Find More ❯</button>
+    </div>
+  </div>
+</section>
+
+
+
+  
+
+  <div class="glasses-carousel-buttons">
+    <button class="prev-btn">❮</button>
+    <button class="next-btn">❯</button>
+  </div>
+</div>
+<!-- --------------------------filter section -------------------------->
+<main class="container1-0">
+  <section>
+    <h2 class="section-title1-1">Featured Collections</h2> 
+    <div class="products-container1-2">
+<aside class="filter-sidebar">
+  <div class="filter-header">
+    <h2>Filter By</h2>
+    <button class="reset-btn">Reset All</button>
+  </div>
+  <div class="filter-list">
+    <div class="filter-item">
+      <button class="filter-toggle">
+        <span><i class="fa-solid fa-layer-group"></i> Category</span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="filter-content">
+          <label><input type="checkbox"> Eyeglasses</label>
+        <label><input type="checkbox"> Sunglasses</label>
+        <label><input type="checkbox"> Computer Glasses</label>
+        <label><input type="checkbox"> Contact Lenses</label>
+        <label><input type="checkbox"> Accessories</label>
+      </div>
+    </div>
+
+    <div class="filter-item">
+      <button class="filter-toggle">
+        <span><i class="fa-solid fa-brush"></i> Style</span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="filter-content">
+          <label><input type="checkbox"> Round</label>
+        <label><input type="checkbox"> Square</label>
+        <label><input type="checkbox"> Rectangle</label>
+        <label><input type="checkbox"> Aviator</label>
+        <label><input type="checkbox"> Cat-eye</label>
+        <label><input type="checkbox"> Wayfarer</label>
+      </div>
+    </div>
+
+      <div class="filter-item">
+      <button class="filter-toggle">
+        <span><i class="fa-solid fa-ruler-combined"></i> Frame Size</span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="filter-content">
+        <label><input type="checkbox"> Small</label>
+        <label><input type="checkbox"> Medium</label>
+        <label><input type="checkbox"> Large</label>
+        <label><input type="checkbox"> Extra Large</label>
+      </div>
+    </div>
+     
+
+    <div class="filter-item">
+      <button class="filter-toggle">
+        <span><i class="fa-solid fa-gem"></i> Material & Finish</span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="filter-content">
+         <label><input type="checkbox"> Metal</label>
+        <label><input type="checkbox"> Acetate</label>
+        <label><input type="checkbox"> TR90</label>
+        <label><input type="checkbox"> Stainless Steel</label>
+        <label><input type="checkbox"> Mixed Material</label>
+      </div>
+    </div>
+
+    <div class="filter-item">
+      <button class="filter-toggle">
+        <span><i class="fa-solid fa-user-tie"></i>Brands & Designers</span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="filter-content">
+         <label><input type="checkbox"> Ray-Ban</label>
+        <label><input type="checkbox"> Oakley</label>
+        <label><input type="checkbox"> Fastrack</label>
+        <label><input type="checkbox"> Vogue</label>
+        <label><input type="checkbox"> John Jacobs</label>
+        <label><input type="checkbox"> Vincent Chase</label>
+      </div>
+    </div>
+  <div class="filter-item">
+      <button class="filter-toggle">
+        <span><i class="fa-solid fa-palette"></i> Color Options</span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="filter-content">
+        <label><input type="checkbox"> Black</label>
+        <label><input type="checkbox"> Tortoise</label>
+        <label><input type="checkbox"> Gold</label>
+        <label><input type="checkbox"> Silver</label>
+        <label><input type="checkbox"> Transparent</label>
+        <label><input type="checkbox"> Blue</label>
+        <label><input type="checkbox"> Red</label>
+      </div>
+    </div>
+
+     <div class="filter-item">
+      <button class="filter-toggle">
+        <span><i class="fa-solid fa-glasses"></i> Lens Type</span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="filter-content">
+        <label><input type="checkbox"> Single Vision</label>
+        <label><input type="checkbox"> Bifocal</label>
+        <label><input type="checkbox"> Progressive</label>
+        <label><input type="checkbox"> Blue Light Filter</label>
+        <label><input type="checkbox"> Photochromatic</label>
+        <label><input type="checkbox"> Polarized</label>
+      </div>
+    </div>
+
+  <div class="filter-item">
+      <button class="filter-toggle">
+        <span><i class="fa-solid fa-venus-mars"></i> Gender</span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="filter-content">
+        <label><input type="checkbox"> Men</label>
+        <label><input type="checkbox"> Women</label>
+        <label><input type="checkbox"> Unisex</label>
+        <label><input type="checkbox"> Kids</label>
+      </div>
+    </div>
+
+        <div class="filter-item">
+      <button class="filter-toggle">
+        <span><i class="fa-solid fa-indian-rupee-sign"></i> Price Range</span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="filter-content">
+        <label><input type="checkbox"> Under ₹1000</label>
+        <label><input type="checkbox"> ₹1000 - ₹2000</label>
+        <label><input type="checkbox"> ₹2000 - ₹3000</label>
+        <label><input type="checkbox"> ₹3000 - ₹5000</label>
+        <label><input type="checkbox"> ₹5000+</label>
+      </div>
+    </div>
+    <div class="filterbtn">
+      <button class="filterbtn1">Apply Filter</button>
+    </div>
+
+
+  </div>
+</aside>
+
+
+                <!---------------- Products Grid -------------------->
+ <!-- Products Grid -->
+                <div class="products-grid">
+                    <!-- Product 1 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/product1.jpg" alt="Premium tailored wool blazer in navy blue with gold buttons">
+                            <button class="wishlist-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Tailored Wool Blazer</h3>
+                            <div class="product-price">Rs.3249.99</div>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span>(24)</span>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 2 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/product2.jpg" alt="Minimalist white cotton t-shirt with Nazar logo embroidery">
+                            <button class="wishlist-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Logo Embroidered Tee</h3>
+                            <div class="product-price">Rs.4239.99</div>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <span>(56)</span>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 3 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/product3.jpg" alt="Silk slip dress in emerald green with adjustable straps">
+                            <button class="wishlist-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Silk Slip Dress</h3>
+                            <div class="product-price">Rs.4599</div>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span>(42)</span>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 4 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/product4.jpg" alt="Lightweight cashmere sweater in soft beige with ribbed details">
+                            <button class="wishlist-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Cashmere Sweater</h3>
+                            <div class="product-price">Rs.4999</div>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span>(31)</span>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 5 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/product5.jpg" alt="High-waisted tailored trousers in charcoal gray with pleated front">
+                            <button class="wishlist-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Tailored Trousers</h3>
+                            <div class="product-price">Rs.5699</div>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span>(47)</span>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 6 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/product6.png" alt="Leather crossbody bag in tan with gold hardware and adjustable strap">
+                            <button class="wishlist-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Leather Crossbody Bag</h3>
+                            <div class="product-price">Rs.3999</div>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <span>(38)</span>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 7 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/product7.png" alt="Wool beanie in dark green with Nazar logo embroidery">
+                            <button class="wishlist-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Logo Wool Beanie</h3>
+                            <div class="product-price">Rs.2599</div>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span>(27)</span>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 8 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/product8.jpg" alt="Premium leather loafers in cognac with rubber sole for comfort">
+                            <button class="wishlist-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Leather Loafers</h3>
+                            <div class="product-price">Rs.5999.99</div>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span>(63)</span>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </main>
+  </section>
+</section>
+
+
+<!-- ------------------reviews section------------------------------ -->
+
+<section class="customer-reviews  ">
+  <h2 class="reviews-title">Customer Reviews</h2>
+
+  <div class="reviews-grid">
+
+    <div class="review-card">
+      <div class="review-header">
+        <img src="Review images/review1.jpeg" alt="User Photo" class="review-avatar">
+        <div class="review-info">
+          <h4 class="review-name">user-M </h4>
+          <span class="review-date">July 2025</span>
+        </div>
+        <div class="review-rating">
+          ★★★★★
+        </div>
+      </div>
+      <p class="review-text">
+        "Excellent quality frames and fast delivery. The fit is perfect and the lenses are crystal clear."
+      </p>
+    </div>
+
+    <div class="review-card">
+      <div class="review-header">
+        <img src="Review images/review2.jpeg" alt="User Photo" class="review-avatar">
+        <div class="review-info">
+          <h4 class="review-name">user-F</h4>
+          <span class="review-date">June 2025</span>
+        </div>
+        <div class="review-rating">
+          ★★★★☆
+        </div>
+      </div>
+      <p class="review-text">
+        "Stylish designs at affordable prices. Got so many compliments. Delivery took 2 days extra though."
+      </p>
+    </div>
+
+    <div class="review-card">
+      <div class="review-header">
+        <img src="Review images/review1.jpeg" alt="User Photo" class="review-avatar">
+        <div class="review-info">
+          <h4 class="review-name">user-M</h4>
+          <span class="review-date">May 2025</span>
+        </div>
+        <div class="review-rating">
+          ★★★★★
+        </div>
+      </div>
+      <p class="review-text">
+        "The blue light filter works really well. My eyes feel less strained. Highly recommend!"
+      </p>
+    </div>
+<div class="review-card">
+  <div class="review-header">
+    <img src="Review images/review2.jpeg" alt="User Photo" class="review-avatar">
+    <div class="review-info">
+      <h4 class="review-name">user-M</h4>
+      <span class="review-date">April 2025</span>
+    </div>
+    <div class="review-rating">★★★★☆</div>
+  </div>
+  <p class="review-text">
+    "Loved the collection! I ordered a cat-eye frame and it looks just like the pictures. Got it within 3 days in Bangalore."
+  </p>
+</div>
+
+<div class="review-card">
+  <div class="review-header">
+    <img src="Review images/review1.jpeg" alt="User Photo" class="review-avatar">
+    <div class="review-info">
+      <h4 class="review-name">user-f</h4>
+      <span class="review-date">March 2025</span>
+    </div>
+    <div class="review-rating">★★★★★</div>
+  </div>
+  <p class="review-text">
+    "Super lightweight and comfortable to wear. I use it daily for office work. The blue light filter really helps with headaches."
+  </p>
+</div>
+
+<div class="review-card">
+  <div class="review-header">
+    <img src="Review images/review2.jpeg" alt="User Photo" class="review-avatar">
+    <div class="review-info">
+      <h4 class="review-name">user-F</h4>
+      <span class="review-date">February 2025</span>
+    </div>
+    <div class="review-rating">★★★☆☆</div>
+  </div>
+  <p class="review-text">
+    "Decent quality, but the size was a bit tight for my face. I had to get it adjusted locally. Overall good value though."
+  </p>
+</div>
+
+
+  </div>
+</section>
+
+
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <!-- Column 1 -->
+            <div class="footer-column">
+                <h3>Shop</h3>
+                <ul>
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Collections</a></li>
+                </ul>
+            </div>
+            
+            <!-- Column 2 -->
+            <div class="footer-column">
+                <h3>About</h3>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+            
+            <!-- Column 3 -->
+            <div class="footer-column">
+                <h3>Help</h3>
+                <ul>
+                    <li><a href="#">Customer Service</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            
+            <!-- Column 4 -->
+            <div class="footer-column">
+                <h3>Connect</h3>
+                <p>Sign up for our newsletter to receive exclusive offers and updates.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p> &copy; 2025 Nazario. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <script src="app.js"></script>
+  </body>
+</html>
